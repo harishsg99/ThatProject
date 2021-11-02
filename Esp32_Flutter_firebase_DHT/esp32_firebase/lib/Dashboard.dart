@@ -138,8 +138,8 @@ class _DashboardState extends State<Dashboard>
     Alert(
       context: context,
       type: AlertType.info,
-      title: "Login Out",
-      desc: "Do you want to login out now?",
+      title: "Water Plants",
+      desc: "Do you want to Water plants now?",
       buttons: [
         DialogButton(
           child: Text(
@@ -154,12 +154,24 @@ class _DashboardState extends State<Dashboard>
             "Yes",
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
-          onPressed: handleSignOut,
+          onPressed:nhandlewater,
           color: Colors.teal,
         )
       ],
     ).show();
   }
+  
+  
+  
+    handlewater() {
+    Alert(
+      context: context,
+      type: AlertType.info,
+      title: "Water Plants",
+      desc: "Bot started to sprinkle water into plants"
+    ).show();
+  }
+
 
   Future<Null> handleSignOut() async {
     this.setState(() {
